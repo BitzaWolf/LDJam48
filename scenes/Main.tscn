@@ -1,0 +1,22 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://prefabs/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://prefabs/sections/Empty Section.tscn" type="PackedScene" id=2]
+[ext_resource path="res://prefabs/sections/Section01.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/Main.gd" type="Script" id=4]
+[ext_resource path="res://prefabs/sections/Section02.tscn" type="PackedScene" id=5]
+[ext_resource path="res://UI/Game UI.tscn" type="PackedScene" id=6]
+
+[node name="Game" type="Node"]
+script = ExtResource( 4 )
+sections = [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 5 ) ]
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 96.7303, 623.31 )
+
+[node name="Sections" type="Node2D" parent="."]
+position = Vector2( 0, 704 )
+
+[node name="Empty Section" parent="Sections" instance=ExtResource( 5 )]
+
+[node name="Game UI" parent="." instance=ExtResource( 6 )]

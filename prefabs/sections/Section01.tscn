@@ -1,0 +1,112 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://prefabs/Time Pickup.tscn" type="PackedScene" id=1]
+
+[sub_resource type="QuadMesh" id=1]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 0.5, 0.5 )
+
+[node name="Empty Section" type="Node2D"]
+
+[node name="Mesh" type="MeshInstance2D" parent="."]
+position = Vector2( 2048, 32 )
+scale = Vector2( 4096, 64 )
+mesh = SubResource( 1 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Mesh"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mesh/StaticBody2D"]
+shape = SubResource( 2 )
+
+[node name="Mesh2" type="MeshInstance2D" parent="."]
+position = Vector2( 32, -480 )
+scale = Vector2( 64, 64 )
+mesh = SubResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Mesh2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mesh2/StaticBody2D"]
+shape = SubResource( 2 )
+
+[node name="Mesh4" type="MeshInstance2D" parent="."]
+position = Vector2( 1344, -144 )
+scale = Vector2( 1024, 32 )
+mesh = SubResource( 1 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Mesh4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mesh4/StaticBody2D"]
+shape = SubResource( 2 )
+
+[node name="Mesh5" type="MeshInstance2D" parent="."]
+position = Vector2( 2368, -272 )
+scale = Vector2( 512, 32 )
+mesh = SubResource( 1 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Mesh5"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mesh5/StaticBody2D"]
+shape = SubResource( 2 )
+
+[node name="Mesh6" type="MeshInstance2D" parent="."]
+position = Vector2( 3328, -272 )
+scale = Vector2( 512, 32 )
+mesh = SubResource( 1 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Mesh6"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mesh6/StaticBody2D"]
+shape = SubResource( 2 )
+
+[node name="Mesh15" type="MeshInstance2D" parent="."]
+position = Vector2( 4064, -544 )
+scale = Vector2( 64, 64 )
+mesh = SubResource( 1 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Mesh15"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mesh15/StaticBody2D"]
+shape = SubResource( 2 )
+
+[node name="Time Pickup" parent="." instance=ExtResource( 1 )]
+position = Vector2( 928, -224 )
+
+[node name="Time Pickup3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1184, -224 )
+
+[node name="Time Pickup5" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1440, -224 )
+
+[node name="Time Pickup7" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1696, -224 )
+
+[node name="Time Pickup9" parent="." instance=ExtResource( 1 )]
+position = Vector2( 2248, -352 )
+
+[node name="Time Pickup10" parent="." instance=ExtResource( 1 )]
+position = Vector2( 2376, -352 )
+
+[node name="Time Pickup11" parent="." instance=ExtResource( 1 )]
+position = Vector2( 2504, -352 )
+
+[node name="Time Pickup12" parent="." instance=ExtResource( 1 )]
+position = Vector2( 3104, -352 )
+
+[node name="Time Pickup13" parent="." instance=ExtResource( 1 )]
+position = Vector2( 3232, -352 )
+
+[node name="Time Pickup14" parent="." instance=ExtResource( 1 )]
+position = Vector2( 3360, -352 )
+
+[node name="Time Pickup15" parent="." instance=ExtResource( 1 )]
+position = Vector2( 3496, -352 )
+
+[node name="Time Pickup16" parent="." instance=ExtResource( 1 )]
+position = Vector2( 3616, -400 )
+
+[node name="Time Pickup17" parent="." instance=ExtResource( 1 )]
+position = Vector2( 3744, -448 )

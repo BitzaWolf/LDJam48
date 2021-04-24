@@ -1,0 +1,48 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="QuadMesh" id=1]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 0.5, 0.5 )
+
+[node name="Empty Section" type="Node2D"]
+
+[node name="Mesh" type="MeshInstance2D" parent="."]
+position = Vector2( 2048, 32 )
+scale = Vector2( 4096, 64 )
+mesh = SubResource( 1 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Mesh"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mesh/StaticBody2D"]
+shape = SubResource( 2 )
+
+[node name="Mesh2" type="MeshInstance2D" parent="."]
+position = Vector2( 32, -480 )
+scale = Vector2( 64, 64 )
+mesh = SubResource( 1 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Mesh2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mesh2/StaticBody2D"]
+shape = SubResource( 2 )
+
+[node name="Mesh3" type="MeshInstance2D" parent="."]
+position = Vector2( 1728, -96 )
+scale = Vector2( 1024, 192 )
+mesh = SubResource( 1 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Mesh3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mesh3/StaticBody2D"]
+shape = SubResource( 2 )
+
+[node name="Mesh15" type="MeshInstance2D" parent="."]
+position = Vector2( 4064, -544 )
+scale = Vector2( 64, 64 )
+mesh = SubResource( 1 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Mesh15"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mesh15/StaticBody2D"]
+shape = SubResource( 2 )
