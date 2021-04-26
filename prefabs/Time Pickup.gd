@@ -36,4 +36,11 @@ func _process(delta):
 
 func _on_Area2D_body_entered(body):
     emit_signal("time_collected")
+    animation = "hidden"
+    $Area2D.hide()
+    $AudioStreamPlayer2D.play()
+
+
+func _on_AudioStreamPlayer2D_finished():
     queue_free()
+    pass # Replace with function body.

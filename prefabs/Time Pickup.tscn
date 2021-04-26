@@ -1,13 +1,19 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://prefabs/Time Pickup.gd" type="Script" id=1]
 [ext_resource path="res://assets/time-pickup/time-pickup.png" type="Texture" id=2]
+[ext_resource path="res://assets/audio/pickup.wav" type="AudioStream" id=3]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 2 ) ],
 "loop": true,
 "name": "default",
+"speed": 5.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "hidden",
 "speed": 5.0
 } ]
 
@@ -23,4 +29,9 @@ animationSpeed = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource( 2 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+bus = "Sound Effects"
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="finished" from="AudioStreamPlayer2D" to="." method="_on_AudioStreamPlayer2D_finished"]

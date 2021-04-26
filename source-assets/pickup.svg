@@ -17,8 +17,8 @@
    inkscape:version="0.92.3 (2405546, 2018-03-11)"
    sodipodi:docname="pickup.svg"
    inkscape:export-filename="C:\github\LDJam48\assets\time-pickup\time-pickup.png"
-   inkscape:export-xdpi="96.000008"
-   inkscape:export-ydpi="96.000008">
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96">
   <defs
      id="defs2" />
   <sodipodi:namedview
@@ -29,7 +29,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="7.9195959"
-     inkscape:cx="-13.353336"
+     inkscape:cx="-33.87206"
      inkscape:cy="24.590634"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -52,7 +52,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>

@@ -1,19 +1,12 @@
 extends KinematicBody2D
-#signal signal_name
-# Creates a custom event that you can fire off via emit_signal("signal_name")
-
-# Script description here.
-
-# enum NAME { name1, name2 }
 
 export var gravity = 70
 export var jumpSpeed = -1450
 export (Array, int) var moveSpeeds = [300, 600, 900, 1500]
 export (Array, float) var moveSpeedTimers = [0.5, 1.2, 3]
 export (Array, float) var moveSpeedDeclineTimers = [5, 2, 0]
+export (Array, float) var animationSpeeds = [1, 1.5, 2, 3.5]
 
-# export (PackedScene) var instancedSceneVariable
-#     later on... var mob = instancedSceneVariable.instance(); add_child(mob);
 var _velocity = Vector2()
 var _isGrounded = true
 var _currentSpeedLevel = 0
@@ -23,22 +16,17 @@ var _timeNotMovingForward = 0
 func get_current_speed():
     return moveSpeeds[_currentSpeedLevel]
 
+func get_velocity():
+    return _velocity
+
 func reset_speed():
     _currentSpeedLevel = 0
     _timeHeldForward = 0
 
-# Activated when the node enters the Scene Tree and becomes active.
-#func _ready():
-
-# Runs after all of its children have also left. A destructor.
-#func _exit_tree():
-
-# The engine's internal game loop function. Delta is in seconds (float).
-#func _process(delta):
-
 # Engine's physics simulation game loop function. Called every fixed 1/60th of a second (by default)
 func _physics_process(delta):
-    if ($"/root/Game".is_game_over()):
+    if (! $"/root/Game".is_in_game()):
+        $AnimatedSprite.animation = "default"
         return
     
     _check_grounded_state()
@@ -46,6 +34,7 @@ func _physics_process(delta):
     _increase_move_speed()
     _decrease_move_speed()
     _move_kinematic(delta)
+    _update_animation()
     pass
 
 func _check_grounded_state():
@@ -89,3 +78,10 @@ func _decrease_move_speed():
 func _move_kinematic(delta):
     _velocity.y += gravity
     _velocity = move_and_slide(_velocity, Vector2.UP)
+
+func _update_animation():
+    $AnimatedSprite.animation = "running"
+    if (_velocity.x == 0):
+        $AnimatedSprite.animation = "default"
+    
+    $AnimatedSprite.speed_scale = animationSpeeds[_currentSpeedLevel]

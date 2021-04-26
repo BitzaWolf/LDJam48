@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Triangle.wav-df3b485a4da3cc3ebf06fdb59fc8abdb.sample"
+
+[deps]
+
+source_file="res://source-assets/Triangle.wav"
+dest_files=[ "res://.import/Triangle.wav-df3b485a4da3cc3ebf06fdb59fc8abdb.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

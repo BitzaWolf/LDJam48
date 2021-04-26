@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/backgrounds/forest.jpg" type="Texture" id=1]
+[ext_resource path="res://scenes/Parallax Background.gd" type="Script" id=2]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+script = ExtResource( 2 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 0.4, 1 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxLayer"]
+texture = ExtResource( 1 )
